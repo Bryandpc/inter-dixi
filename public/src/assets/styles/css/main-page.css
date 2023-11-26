@@ -1,59 +1,79 @@
-html{
+html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-:root{
+:root {
+    /* Tema claro */
     --azul-clarinho: #50b7f5;
     --quase-branco: #e6ecf0;
+    --branco: #fff;
+    /* Tema escuro */
+    --cinza-ciano: #476173;
+    --cinza-escuro: #121212;
+    --preto-leve: #17170e;
+    --cinza-azulado: #2e3547;
+    --azul-escuro: #212f41;
+    --cinza-claro: #CCCCCC;
+    --cinza-fundo: #312f2f;
+    --teste: #2b2929;
 }
 
 /* Barra de navegação  */
-.nav_logo{
+.nav_logo {
     width: 50px;
     height: 30px;
     color: var(--azul-clarinho);
     fill: currentColor;
 }
 
-.Menu_options{
+.Menu_options {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.Menu_options .material-icons{
-    padding: 20px;
+.Menu_options .material-icons {
+    color: white;
+    padding: 10px;
 }
 
-.Menu_options h2{
-    font-size: 20px;
+.Menu_options h2 {
+    color: var(--branco);
+    font-size: 18px;
     font-weight: bold;
     margin-right: 20px;
 }
 
-.Menu_options:hover{
-    background-color: var(--quase-branco);
+.Menu_options:hover {
+    background-color: var(--cinza-azulado);
     border-radius: 30px;
-    color: var(--azul-clarinho);
+    color: var(--branco);
 }
 
-.tweet_btn{
+.tweet_btn {
     width: 100%;
     background-color: var(--azul-clarinho);
     border: none;
-    color: white;
+    color: black;
     font-weight: bold;
     border-radius: 30px;
-    height: 50px;
+    margin-top: 20px;
+    height: 45px;
 }
 
-body{
+.tweet_btn:hover {
+    cursor: pointer;
+    color: var(--branco);
+}
+
+body {
+    background-color: var(--cinza-escuro);
     display: flex;
     height: 100vh;
     max-width: 1300px;
@@ -62,90 +82,99 @@ body{
     padding: 0 10px;
 }
 
-nav{
+nav {
     flex: 0.2;
-    border-right: 1px solid var(--quase-branco);
+    border-right: 1px solid var(--cinza-claro);
     min-width: 250px;
-    margin-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 /* Seção principal */
-main{
-    flex: 0.5; 
-    border-right: 1px solid var(--quase-branco);
+main {
+    background-color: var(--cinza-fundo);
+    flex: 0.5;
+    border-right: 1px solid var(--cinza-claro);
     min-width: fit-content;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-.header{
+.header {
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: var(--cinza-claro);
     z-index: 10;
-    border: 1px solid var(--quase-branco);
-    padding: 15px 20px;
+    border: 1px solid var(--cinza-claro);
+    padding: 15px 22px;
 }
 
-main::-webkit-scrollbar{
+main::-webkit-scrollbar {
     display: none;
 }
 
-.header h2{
+.header h2 {
     font-weight: bold;
     font-size: 20px;
 }
 
-.tweet_box-input img{
+.tweet_box-input img {
     border-radius: 50%;
     height: 40px;
 }
 
-.tweet_box{
-    padding-bottom: 10px;
-    border-bottom: 8px solid var(--quase-branco);
-    padding-right: 10px;
+.tweet_box {
+    border-bottom: 3px solid var(--cinza-claro);
 }
 
-.tweet_box form{
+.tweet_box form {
     display: flex;
     flex-direction: column;
 }
 
-.tweet_box-input{
+.tweet_box-input {
+    background-color: var(--teste);
     display: flex;
-    padding: 20px;
+    padding: 16px;
 }
 
-.tweet_box-input input{
-    flex: 1;
+.tweet_box-input input {
+    border-radius: 50px;
+    flex: 0.9;
+    height: 3rem;
+    padding-left: 20px;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 16px;
     border: none;
     outline: none;
 }
-
-.tweet_box-input button{ 
+.tweet_box-input input::placeholder{
+    padding-left: 20px;
+    font-size: 16px;
+}
+.tweet_box-input input:focus::placeholder {
+    color: transparent; 
+}
+.tweet_box-input button {
     background-color: var(--azul-clarinho);
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     border-radius: 30px;
     border: none;
     width: 80px;
     height: 40px;
-    margin-top: 20px;
-    margin-left: auto;
+    margin: auto auto;
     cursor: pointer;
 }
 
 .tweet_box-input button:hover {
+    color: var(--branco);
+    cursor: pointer;
     background-color: #4297cc;
 }
 
-.post_profile-image img{
+.post_profile-image img {
     border-radius: 50%;
     height: 40px;
 }
@@ -155,92 +184,111 @@ main::-webkit-scrollbar{
     flex-direction: column;
 }
 
-.post{
+.post {
     display: flex;
     align-items: flex-start;
-    border-bottom: 1px solid var(--quase-branco);
+    border-bottom: 1px solid var(--cinza-claro);
     padding-bottom: 10px;
 }
 
-.post_body img{
+.post_body img {
     width: 450px;
     object-fit: contain;
     border-radius: 20px;
 }
 
-.post_footer{
+.post_footer {
+    color: var(--branco);
     display: flex;
-    justify-content: space-between;
     margin-top: 10px;
+    
 }
-
-.post_badge{
+.post_footer span:nth-child(1){
+    cursor: pointer;
+}
+.post_footer span:nth-child(2) {
+    cursor: pointer;
+    padding-left: 20px;
+}
+.post_badge {
     font-size: 14px !important;
     color: var(--azul-clarinho);
     margin-right: 5px;
-
 }
 
-.header-icon-section{
+.header-icon-section {
     font-weight: 600;
     font-size: 12px;
-    color: grey;
+    color: var(--cinza-claro);
 }
 
-.post_header-text h3{
+.post_header-text h3 {
+    color: var(--branco);
     font-size: 13px;
-    margin-bottom: 5px;
+    margin: 8px 0;
 }
 
-.post_header-discription{
+.post_header-discription {
+    color: white;
     margin-bottom: 10px;
     font-size: 15px;
 }
 
-.post_body{ 
+.post_body {
     flex: 1;
     padding: 10px;
 }
 
-.post_profile-image{
+.post_profile-image {
     padding: 20px;
 }
 
 
 /* Seção lateral */
-aside{
-    flex: 0.3; 
+aside {
+    flex: 0.3;
 }
 
-.aside_input{
+.aside_input {
     display: flex;
     align-items: center;
     background-color: var(--quase-branco);
     padding: 10px;
+    padding-left: 4px;
     border-radius: 20px;
     margin-top: 10px;
     margin-left: 20px;
 }
 
-.aside_input input{
+.aside_input input::placeholder {
+    padding-left: 4px;
+}
+.aside_input input:focus::placeholder {
+    color: transparent; 
+}
+
+.aside_input input {
     border: none;
     background-color: var(--quase-branco);
     outline: none;
 }
 
-.aside_search-icon{
-    color: gray;
+.aside_search-icon {
+    cursor: pointer;
+    padding-left: 2px;
+    color: var(--cinza-ciano);
 }
 
-.aside_container{
+.aside_container {
     margin-top: 15px;
     margin-left: 20px;
     padding: 20px;
-    background-color: #f5f8fa;
+    background-color: var(--quase-branco);
     border-radius: 20px;
 }
 
-.aside_container h2{
+.aside_container h2 {
+    color: var(--cinza-escuro);
     font-size: 18px;
     font-weight: 800;
 }
