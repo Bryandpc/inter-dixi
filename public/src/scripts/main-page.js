@@ -12,6 +12,7 @@ botaoPostar.addEventListener('click', (evento) => {
 
     // Limpando o campo da atualização
     mensagemNovaAttInput.value = "";
+    mensagemNovaAtt.style.height = '48px';
 
     // Definindo qual o usuário logado
     let usuarioLogado = {
@@ -99,3 +100,8 @@ function dataAtual() {
 
     return dataAtual;
 }
+function autoResize(element) {
+    element.style.height = 'auto';  
+    element.style.height = (element.scrollHeight) + 'px';  
+    
+  }

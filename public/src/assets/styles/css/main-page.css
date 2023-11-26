@@ -19,8 +19,8 @@ html {
     --preto-leve: #17170e;
     --cinza-azulado: #2e3547;
     --azul-escuro: #212f41;
-    --cinza-claro: #CCCCCC;
-    --cinza-fundo: #312f2f;
+    --cinza-claro: #666363;
+    --cinza-fundo: #1b1a1a;
     --teste: #2b2929;
 }
 
@@ -101,14 +101,6 @@ main {
     scrollbar-width: none;
 }
 
-.header {
-    position: sticky;
-    top: 0;
-    background-color: var(--cinza-claro);
-    z-index: 10;
-    border: 1px solid var(--cinza-claro);
-    padding: 15px 22px;
-}
 
 main::-webkit-scrollbar {
     display: none;
@@ -125,35 +117,42 @@ main::-webkit-scrollbar {
 }
 
 .tweet_box {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     border-bottom: 3px solid var(--cinza-claro);
 }
 
-.tweet_box form {
+.tweet_box form, textarea {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
 .tweet_box-input {
-    background-color: var(--teste);
+    background-color: var(--cinza-fundo);
     display: flex;
     padding: 16px;
 }
 
-.tweet_box-input input {
-    border-radius: 50px;
+ textarea {
+    resize: none;
+    border-radius: 12px;
     flex: 0.9;
+    overflow: hidden;
+    
     height: 3rem;
     padding-left: 20px;
+    padding-top: 12px;
     margin-left: 20px;
     font-size: 16px;
     border: none;
     outline: none;
 }
-.tweet_box-input input::placeholder{
-    padding-left: 20px;
+.tweet_box-input textarea::placeholder{
     font-size: 16px;
 }
-.tweet_box-input input:focus::placeholder {
+.tweet_box-input textarea:focus::placeholder {
     color: transparent; 
 }
 .tweet_box-input button {
@@ -219,7 +218,7 @@ main::-webkit-scrollbar {
 .header-icon-section {
     font-weight: 600;
     font-size: 12px;
-    color: var(--cinza-claro);
+    color: var(--quase-branco);
 }
 
 .post_header-text h3 {
@@ -229,6 +228,8 @@ main::-webkit-scrollbar {
 }
 
 .post_header-discription {
+    max-width: 400px;
+    word-wrap: break-word;
     color: white;
     margin-bottom: 10px;
     font-size: 15px;
