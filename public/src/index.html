@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/css/main-page.css">
+    <link rel="icon" href="./assets/images/favicon.png">
+
+    <title>Inter DIXI</title>
+
+</head>
+<body>
+
+    <!-- Barra de navegação -->
+    <nav >
+        <div class="nav_logo-wrapper">
+            LOGO_DA_DIXI
+            <br>
+            <br>
+        </div>
+
+        <div class="Menu_options active">
+            <span class="material-icons">home</span>
+            <h2>Início</h2>
+        </div>
+
+        <div class="Menu_options">
+            <span class="material-icons">group</span>
+            <h2>Comunidade</h2>
+        </div>
+
+        <div class="Menu_options">
+            <span class="material-icons">person</span>
+            <h2>Perfil</h2>
+        </div> 
+
+        <button class="tweet_btn">Postar</button>
+    </nav>
+
+  
+    <!-- Seção principal -->
+    <main>
+        <div class="header">
+            <h2>Inter DIXI</h2>
+        </div>
+
+        <div class="tweet_box">
+            <form>
+                <div class="tweet_box-input">
+                    <img src="./assets/images/foto perfil.png" alt="Imagem Perfil do Usuário">
+                    <input id="mensagem-nova-att" type="text" placeholder="Qual a novidade?">
+                    <button class="botao-postar" id="botao-postar">Postar</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="atualizacoes">
+            <div class="post">
+                <div class="post_profile-image">
+                    <img src="./assets/images/foto perfil.png" alt="Imagem Perfil do Usuário">
+    
+                </div>
+    
+                <div class="post_body">
+                    <div class="post_header">
+                        <div class="post_header-text">
+                            <h3>Thiago Diogo
+                                <span class="header-icon-section">
+                                    <span class="material-icons post_badge">verified</span>@pastel
+                                </span>
+                            </h3>
+                        </div>
+    
+                        <div class="post_header-discription">
+                            <p>WEB DIXI passando por uma lentidão pessoal, já estamos resolvendo.</p>
+                        </div>
+                        
+                    </div>
+                    <img src="./assets/images/webdixi-foto.png" alt="Foto exemplo">
+    
+                    <div class="post_footer">
+                        <span class="material-icons">chat</span>
+                        <span class="material-icons">favorite_border</span>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Seção lateral -->
+    <aside>
+
+        <div class="aside_input">
+            <span class="material-icons aside_search-icon">search</span>
+            <input type="text" placeholder="Pesquisar">
+ 
+        </div>
+
+        <div class="aside_container">
+            <h2>Principal Atualização</h2>
+            <blockquote class="twitter-tweet"><a href="https://twitter.com/eipastel_dev/status/1728586559954276428"></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        </div>
+        
+    </aside>
+    
+</body>
+<script src="./scripts/main-page.js"></script>
+</html>
